@@ -1,0 +1,90 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Halka Arz Kar Hesaplama"
+        android:layout_marginLeft="40dp"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_marginRight="40dp"
+        android:layout_height="wrap_content"
+
+        android:text="!!! Bu uygulama yazdığınız lot adedinden seçtiğiniz gün kadar %10 kar yaparsa kazanacağınız miktarı gösterir!!! "
+        android:layout_marginLeft="40dp"
+        android:textSize="25dp"
+        />
+
+    <EditText
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:layout_marginTop="20dp"
+        android:id="@+id/etHisseAdedi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hisse adedi"
+        android:inputType="number" />
+
+    <EditText
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:id="@+id/etBirimFiyat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hissenin birim fiyatı"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        android:id="@+id/etGunSayisi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Gün sayısı"
+        android:inputType="number" />
+
+    <!-- Yatay yerleşim için yeni bir LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"> <!-- Butonlar ortalansın -->
+
+        <Button
+            android:id="@+id/btnHesapla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="Hesapla" />
+
+        <Button
+            android:id="@+id/hesapmak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Hesap Makinesi" />
+    </LinearLayout>
+
+    <!-- RecyclerView burada günleri gösterecek -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvGunler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
